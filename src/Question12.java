@@ -13,7 +13,7 @@ public class Question12 {
         System.out.print("과학 점수를 입력하세요: ");
         int d = sc.nextInt();
 
-        int avg = (a + b + c + d) / 4;
+         double avg = (double) (a + b + c + d) / 4;
 
         if (avg >= 60) {
             System.out.println("합격");
