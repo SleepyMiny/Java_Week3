@@ -18,6 +18,7 @@ public class Question13 {
         double sum1 = 0;
         double sum2 = 0;
         double sum3 = 0;
+        double sum4 = 0;
 
         switch (d) {
             case "*":
@@ -38,11 +39,8 @@ public class Question13 {
         }
 
         switch (e) {
-            case "+":
-                sum2 = sum1 + c;
-                break;
-            case "-":
-                sum2 = sum1 - c;
+            case "+", "-":
+                sum2 = b;
                 break;
             case "*":
                 sum2 = sum1 * c;
@@ -60,10 +58,10 @@ public class Question13 {
 
         switch (d) {
             case "+":
-                sum3 = sum2 + a;
+                sum3 = a + sum2;
                 break;
             case "-":
-                sum3 = sum2 - a;
+                sum3 = a - sum2;
                 break;
             case "*", "/":
                 sum3 = sum2;
@@ -72,10 +70,24 @@ public class Question13 {
                 System.out.println("에러");
         }
 
+        switch (e) {
+            case "+":
+                sum4 = sum3 + c;
+                break;
+            case "-":
+                sum4 = sum3 - c;
+                break;
+            case "*", "/":
+                sum4 = sum3;
+                break;
+            default:
+                System.out.println("에러");
+        }
 
 
 
-        System.out.println(sum3);
+
+        System.out.println(sum4);
 
     }
 }
